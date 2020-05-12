@@ -1,8 +1,20 @@
 import React from 'react';
+
+
 class Square extends React.Component {
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            value = null,
+        };
+    }
+    
+    
     render() {
       return (
-        <button className="square">
+        // Aca el hijo tiene la prop el value pasado 
+        <button className="square" onClick= {() => {alert('click')}}> 
           {this.props.value}
         </button>
       );
@@ -11,7 +23,7 @@ class Square extends React.Component {
   
   class Board extends React.Component {
     renderSquare(i) {
-      return <Square value={i} />;
+      return <Square value={i} />; /* le pasa la i al hijo square como prop value*/ 
     }
   
     render() {
