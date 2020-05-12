@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<ShoppingList  /> */}
+    <ShoppingList  /> 
     <Game />
   </React.StrictMode>,
   document.getElementById('root')
