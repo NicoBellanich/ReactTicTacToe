@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+/*
 function App() {
   return (
     <div className="App">
@@ -22,5 +22,24 @@ function App() {
     </div>
   );
 }
+*/
 
-export default App;
+//Shooping list is a React component class o React component type
+class ShoppingList  extends React.Component {
+  render() {
+    return (
+      <div className="shopping-list">
+        <h1>Shopping List for {this.props.name}</h1>
+        <ul>
+          {/* estos son 'elementos', en babel se puede ver como cambian
+          en tiempo de construccion a React.CreateElement("ul", null, null) o ("li",null, Instagram")*/}
+          <li>Instagram</li> 
+          <li>WhatsApp</li>
+          <li>Oculus</li>
+        </ul>
+      </div>
+    );
+  }
+}
+export default ShoppingList ;
+
