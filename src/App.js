@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 /*
@@ -24,6 +23,7 @@ function App() {
   );
 }
 */
+
 //Shooping list is a React component class o React component type
 class ShoppingList  extends React.Component {
   render() {
@@ -41,5 +41,5 @@ class ShoppingList  extends React.Component {
     );
   }
 }
-
 export default ShoppingList ;
+
