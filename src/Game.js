@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+/* ESTO TE LO HACE BORRAR EN "Lifting State Up"
 class Square extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +16,24 @@ class Square extends React.Component {
         onClick={() => this.setState({value: 'X'})}
       >
         {/*si queremos el que viene por el renderSquare this.props.value
-        pero aca usa el state que es el que esta en this.state en constructor */}
+        pero aca usa el state que es el que esta en this.state en constructor *//*}
         {this.state.value}
       </button>
     );
+  }
+}
+*/
+
+class Square extends React.Component{
+  render(){
+    return(
+      <button
+        className="square"
+        onClick={() => this.props.onClick()}
+      >
+        {this.props.value}
+      </button>
+    )
   }
 }
 
@@ -33,7 +47,12 @@ class Board extends React.Component {
   
   
   renderSquare(i) {
-    return <Square value={this.state.squares[i]} />;
+    return (
+      <Square 
+        value={this.state.squares[i]} 
+        onClick={() => this.handleClick(i)}
+      />
+    );
   }
 
   render() {
